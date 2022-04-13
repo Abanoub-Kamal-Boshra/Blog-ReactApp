@@ -10,11 +10,9 @@ export function PostList({ posts }) {
       </div>
       <div className="col-10">
       <h2>Posts</h2>
-        {posts.map((post) => (
-          
-          <div className="hov inner-box">{
-          <PostItem value={post} />
-                              }
+        {posts.map((post) => (         
+          <div className="hov inner-box">
+            {<PostItem value={post} />}
           </div>
         ))}
       </div>
@@ -52,22 +50,14 @@ export function Author(props){
     <div >
     <table className="table">
     <thead>
-    <th>
-    E-mail
-    </th>
-    <th>
-    Phone
-    </th>
-    <th>
-    website
-    </th>
-    <th>
-    company
-    </th>
+    <th>E-mail</th>
+    <th>Phone</th>
+    <th>website</th>
+    <th>company</th>
     </thead>
     <tbody>
     <tr>
-     <td>{data.state.value.email} </td> 
+    <td>{data.state.value.email} </td> 
     <td>{data.state.value.phone} </td>
     <td>{data.state.value.website} </td>    
     <td>{data.state.value.company.name} </td>
@@ -77,12 +67,7 @@ export function Author(props){
     </table>
     </div>
     <div > 
-    
-    
-     <PostList
-     posts={posts}
-     
-     />
+      <PostList posts={posts}/>
     </div>
     </>
     );
